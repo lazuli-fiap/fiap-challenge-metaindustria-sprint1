@@ -185,6 +185,10 @@ Os requisitos não funcionais descrevem as características de qualidade do sist
 * **RNF07 – Eficiência computacional**
   O sistema deve ser capaz de operar em ambientes com recursos limitados (ex: edge devices).
 
+### Documento completo de requisitos
+
+Local: `/docs/requisitos/requisitos.pdf`
+
 ---
 
 ## Modelagem UML

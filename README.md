@@ -243,3 +243,19 @@ Os requisitos não funcionais descrevem as características de qualidade do sist
   O sistema deve ser capaz de operar em ambientes com recursos limitados (ex: edge devices).
 ---
 
+## Documentação do Projeto
+
+Os diagramas UML e documentos da Sprint 1 estão disponíveis diretamente na raiz principal do repositório GitHub.
+
+### Diagramas UML
+
+- Diagrama de Casos de Uso  
+- Diagrama de Atividades  
+- Diagrama de Classes  
+
+### Documento de Requisitos
+
+- Documento contendo os requisitos funcionais e não funcionais do sistema.
+
+> Todos os arquivos podem ser acessados diretamente pela página principal do repositório.
+

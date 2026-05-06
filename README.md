@@ -89,6 +89,14 @@ Dessa forma, a solução atua de maneira **preventiva**, reduzindo riscos e prom
 * Atua na prevenção de riscos
 * Necessita de visão em tempo real e histórico de eventos
 
+### Administrador do Sistema
+
+* Responsável pela configuração e manutenção do sistema.
+* Define zonas de monitoramento no ambiente industrial.
+* Associa máquinas às zonas configuradas.
+* Configura os EPIs obrigatórios para cada máquina.
+* Define as certificações necessárias para operação das máquinas.
+
 ---
 
 ## Escopo do Sistema
@@ -101,7 +109,7 @@ Dessa forma, a solução atua de maneira **preventiva**, reduzindo riscos e prom
 * Emissão de alertas em tempo real
 * Registro de eventos de risco
 * Validação de certificação de operadores
-* Possível bloqueio de operação em caso de não conformidade
+* Bloqueio de operação em caso de não conformidade
 
 ### Restrições
 
@@ -110,31 +118,45 @@ Dessa forma, a solução atua de maneira **preventiva**, reduzindo riscos e prom
 
 ---
 
-## Stack Utilizada
+## Tecnologias Utilizadas e Justificativas
 
 ### Backend / Processamento
 
-* **Python** → processamento de imagens e integração com IA
-* **OpenCV** → manipulação de vídeo e imagens
+- **Python**  
+  Utilizado como linguagem principal no processamento de imagens e integração com modelos de Inteligência Artificial, devido à ampla compatibilidade com bibliotecas de visão computacional e Machine Learning.
+
+- **OpenCV**  
+  Responsável pela manipulação de imagens e vídeos em tempo real, permitindo captura, leitura, processamento de frames e integração com os modelos de detecção.
+
 
 ### Inteligência Artificial
 
-* **YOLO** → detecção de EPIs em tempo real
-* **ByteTrack** → rastreamento de múltiplos operadores
+- **YOLO (You Only Look Once)**  
+  Utilizado para detecção de EPIs em tempo real devido à sua alta velocidade e precisão em tarefas de visão computacional, sendo adequado para aplicações industriais que exigem baixa latência.
+
+- **ByteTrack**  
+  Utilizado para rastreamento de múltiplos operadores no ambiente industrial, permitindo manter a identificação contínua dos indivíduos durante o monitoramento.
+
 
 ### Ferramentas
 
-* **Google Colab** → treinamento e testes dos modelos
-* **Makesense.ai** → anotação de imagens
+- **Google Colab**  
+  Utilizado para treinamento, testes e validação dos modelos de IA, aproveitando recursos computacionais em nuvem e aceleração por GPU.
 
-### Dados
+- **Makesense.ai**  
+  Utilizado na anotação das imagens para treinamento dos modelos de visão computacional, permitindo criação de datasets personalizados para detecção de EPIs.
 
-* **PostgreSQL** → armazenamento de eventos e registros
 
-### Backend complementar
+### Banco de Dados
 
-* **Java** → regras de negócio e integração de sistema
+- **PostgreSQL**  
+  Utilizado para armazenamento de eventos, registros de monitoramento, alertas e informações relacionadas às validações realizadas pelo sistema, devido à sua confiabilidade, escalabilidade e suporte a dados relacionais.
 
+
+### Backend Complementar
+
+- **Java**  
+  Utilizado para implementação das regras de negócio e integração entre os componentes do sistema, oferecendo robustez, organização arquitetural e facilidade de manutenção em aplicações corporativas.
 ---
 
 ## Requisitos
@@ -145,65 +167,79 @@ Dessa forma, a solução atua de maneira **preventiva**, reduzindo riscos e prom
 
 Os requisitos funcionais descrevem as funcionalidades que o sistema deve executar.
 
-* **RF01 – Detectar pessoas em tempo real**
+- **RF01 – Detectar pessoas em tempo real**  
   O sistema deve identificar indivíduos no ambiente por meio de vídeo.
-* **RF02 – Detectar Equipamentos de Proteção Individual (EPIs)**
+
+- **RF02 – Detectar Equipamentos de Proteção Individual (EPIs)**  
   O sistema deve detectar EPIs como capacete, colete, luvas e outros configurados.
-* **RF03 – Rastrear operadores ao longo do tempo**
+
+- **RF03 – Rastrear operadores ao longo do tempo**  
   O sistema deve manter a identificação de cada indivíduo por meio de tracking (Track ID).
-* **RF04 – Identificar operadores**
+
+- **RF04 – Identificar operadores**  
   O sistema deve reconhecer o operador utilizando reconhecimento facial.
-* **RF05 – Validar certificações do operador**
-  O sistema deve verificar se o operador possui as certificações necessárias para operar determinada máquina.
-* **RF06 – Validar uso de EPIs por operador**
-  O sistema deve verificar se o operador está utilizando todos os EPIs obrigatórios definidos para a máquina.
-* **RF07 – Associar operador à máquina**
-  O sistema deve relacionar o operador detectado à máquina monitorada.
-* **RF08 – Controlar operação da máquina**
+
+- **RF05 – Identificar zona de monitoramento**  
+  O sistema deve identificar em qual zona o operador está localizado.
+
+- **RF06 – Associar operador à máquina**  
+  O sistema deve relacionar o operador detectado à máquina presente na zona monitorada.
+
+- **RF07 – Validar certificações do operador**  
+  O sistema deve verificar se o operador possui as certificações necessárias para operar a máquina identificada.
+
+- **RF08 – Validar uso de EPIs por operador**  
+  O sistema deve verificar se o operador está utilizando todos os EPIs obrigatórios definidos para a máquina associada.
+
+- **RF09 – Controlar operação da máquina**  
   O sistema deve permitir, bloquear ou interromper a operação da máquina com base nas validações realizadas.
-* **RF09 – Operar em tempo real**
-  O sistema deve processar os dados continuamente, permitindo tomada de decisão imediata.
-* **RF10 – Registrar eventos**
+
+- **RF10 – Emitir alertas de risco**  
+  O sistema deve gerar alertas em tempo real ao identificar não conformidades.
+
+- **RF11 – Registrar eventos**  
   O sistema deve registrar eventos relevantes (ex: tentativa de uso sem EPI, bloqueios, desligamentos).
+
+- **RF12 – Operar em tempo real**  
+  O sistema deve processar os dados continuamente, permitindo tomada de decisão imediata.
+
+- **RF13 – Definir zonas de monitoramento**  
+  O sistema deve permitir ao administrador cadastrar e gerenciar zonas de monitoramento.
+
+- **RF14 – Associar máquinas às zonas**  
+  O sistema deve permitir associar máquinas a zonas específicas.
+
+- **RF15 – Definir EPIs obrigatórios por máquina**  
+  O sistema deve permitir configurar os EPIs exigidos para cada máquina.
+
+- **RF16 – Definir certificações por máquina**  
+  O sistema deve permitir configurar as certificações necessárias para operação de cada máquina.
 
 ### Requisitos Não Funcionais
 
 Os requisitos não funcionais descrevem as características de qualidade do sistema.
 
-* **RNF01 – Desempenho em tempo real**
+### Requisitos Não Funcionais (RNF)
+
+- **RNF01 – Desempenho em tempo real**  
   O sistema deve apresentar baixa latência entre captura e decisão.
-* **RNF02 – Precisão**
+
+- **RNF02 – Precisão**  
   O sistema deve atingir níveis adequados de precisão na detecção de pessoas e EPIs.
-* **RNF03 – Robustez**
+
+- **RNF03 – Robustez**  
   O sistema deve funcionar adequadamente sob variações de iluminação, oclusões e diferentes condições do ambiente.
-* **RNF04 – Escalabilidade**
-  O sistema deve permitir expansão para múltiplas câmeras e máquinas.
-* **RNF05 – Confiabilidade**
+
+- **RNF04 – Escalabilidade**  
+  O sistema deve permitir expansão para múltiplas câmeras, zonas e máquinas.
+
+- **RNF05 – Confiabilidade**  
   O sistema deve minimizar falhas que possam gerar bloqueios ou liberações indevidas.
-* **RNF06 – Manutenibilidade**
+
+- **RNF06 – Manutenibilidade**  
   O sistema deve permitir atualização de modelos e regras sem necessidade de grandes alterações estruturais.
-* **RNF07 – Eficiência computacional**
+
+- **RNF07 – Eficiência computacional**  
   O sistema deve ser capaz de operar em ambientes com recursos limitados (ex: edge devices).
-
-### Documento completo de requisitos
-
-Local: `/docs/requisitos/requisitos.pdf`
-
----
-
-## Modelagem UML
-
-### Diagrama de Casos de Uso
-
-Local: `/docs/uml/casos_de_uso.png`
-
-### Diagrama de Atividades
-
-Local: `/docs/uml/atividade.png`
-
-### Diagrama de Classes
-
-Local: `/docs/uml/classes.png`
-
 ---
 

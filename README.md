@@ -115,6 +115,7 @@ Dessa forma, a solução atua de maneira **preventiva**, reduzindo riscos e prom
 
 * Dependência da qualidade das imagens
 * Necessidade de processamento em tempo real
+* Reconhecimento facial sujeito a limitações de precisão
 
 ---
 

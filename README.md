@@ -276,7 +276,7 @@ O protótipo de alta fidelidade do sistema **Lazuli — Controle Industrial** es
 2. **Dashboard** — Visão geral de conformidade, riscos críticos ativos e feeds das câmeras. A partir daqui, clique em:
    - **"Verificar"** no alerta da CAM-04 para abrir a tela de detalhe da câmera e visualizar o alerta de invasão de zona em tempo real.
 3. **Operadores** — Acesse pela barra lateral para consultar a lista de operadores e seus status de certificação. Clique em **"Novo Operador"** para simular o cadastro de EPIs e certificações NR de um colaborador.
-4. **Câmeras** — Lista de câmeras monitoradas. Clique em uma câmera para ver telemetria e entidades detectadas, ou em **"Configurar Marcações"** para simular a definição de zonas de risco.
+4. **Câmeras** — Lista de câmeras monitoradas. Clique na primeira câmera(REC • CH-01) para ver telemetria e entidades detectadas, ou em **"Configurar Marcações"** para simular a definição de zonas de risco.
 5. **Máquinas** — Inventário de ativos com requisitos de EPI vinculados a cada máquina.
 6. **Relatórios** — Acesse o painel de conformidade por setor, filtre por setor (ex: Fundição) e visualize o benchmark e os registros de não conformidade. Use o botão **"Exportar PDF"** para simular a geração do relatório.
 7. **Configurações** — Tela administrativa para gerenciamento de usuários e integrações do sistema.

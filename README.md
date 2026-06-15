@@ -264,11 +264,11 @@ Os diagramas UML e documentos da Sprint 1 estão disponíveis diretamente na rai
 
 O protótipo de alta fidelidade do sistema **Lazuli — Controle Industrial** está disponível no Figma:
 
-🔗 **Link do protótipo:** [INSERIR LINK DO FIGMA AQUI] (permissão de visualização ativa)
+🔗 **Link do protótipo:** [[Figma](https://www.figma.com/design/1MUdcD5Y0e2eWfxA42v2DO/Projeto-SPI?node-id=0-1&t=geIx5mIYYFMS3Q9U-1)] (permissão de visualização ativa)
 
 📄 **Documentação de design** (mapa de telas, decisões de UX e mapeamento com os casos de uso da Sprint 1): [`documentacao-design-lazuli.md`](documentacao-design-lazuli.md)
 
-🎥 **Vídeo de walkthrough:** [INSERIR LINK DO YOUTUBE AQUI]
+🎥 **Vídeo de walkthrough:** [Link do video](https://youtu.be/DzM2R6Macwo)
 
 ### Como navegar pelo protótipo
 

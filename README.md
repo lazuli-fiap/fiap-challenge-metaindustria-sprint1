@@ -4,7 +4,7 @@
 
 * Ana Clara Silveira Salvatico — 555389
 * Eduardo Rodrigues Fernandes — 557219
-* Emily Pereira Ribeiro — 557219
+* Emily Pereira Ribeiro — 554704
 * Fernanda Pereira Molina Teixeira - 552587
 * Vinicius Eiki Franca - 555150 
 
@@ -259,4 +259,27 @@ Os diagramas UML e documentos da Sprint 1 estão disponíveis diretamente na rai
 - Documento contendo os requisitos funcionais e não funcionais do sistema.
 
 > Todos os arquivos podem ser acessados diretamente pela página principal do repositório.
+
+## Protótipo Navegável (Sprint 2)
+
+O protótipo de alta fidelidade do sistema **Lazuli — Controle Industrial** está disponível no Figma:
+
+🔗 **Link do protótipo:** [INSERIR LINK DO FIGMA AQUI] (permissão de visualização ativa)
+
+📄 **Documentação de design** (mapa de telas, decisões de UX e mapeamento com os casos de uso da Sprint 1): [`documentacao-design-lazuli.md`](documentacao-design-lazuli.md)
+
+🎥 **Vídeo de walkthrough:** [INSERIR LINK DO YOUTUBE AQUI]
+
+### Como navegar pelo protótipo
+
+1. **Login** — Tela inicial de acesso ao sistema (ID e senha).
+2. **Dashboard** — Visão geral de conformidade, riscos críticos ativos e feeds das câmeras. A partir daqui, clique em:
+   - **"Verificar"** no alerta da CAM-04 para abrir a tela de detalhe da câmera e visualizar o alerta de invasão de zona em tempo real.
+3. **Operadores** — Acesse pela barra lateral para consultar a lista de operadores e seus status de certificação. Clique em **"Novo Operador"** para simular o cadastro de EPIs e certificações NR de um colaborador.
+4. **Câmeras** — Lista de câmeras monitoradas. Clique em uma câmera para ver telemetria e entidades detectadas, ou em **"Configurar Marcações"** para simular a definição de zonas de risco.
+5. **Máquinas** — Inventário de ativos com requisitos de EPI vinculados a cada máquina.
+6. **Relatórios** — Acesse o painel de conformidade por setor, filtre por setor (ex: Fundição) e visualize o benchmark e os registros de não conformidade. Use o botão **"Exportar PDF"** para simular a geração do relatório.
+7. **Configurações** — Tela administrativa para gerenciamento de usuários e integrações do sistema.
+
+> 💡 Recomenda-se iniciar a navegação pela tela de **Login** para seguir o fluxo completo conforme apresentado no vídeo de walkthrough.
 

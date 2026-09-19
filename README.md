@@ -283,3 +283,21 @@ O protótipo de alta fidelidade do sistema **Lazuli — Controle Industrial** es
 
 > 💡 Recomenda-se iniciar a navegação pela tela de **Login** para seguir o fluxo completo conforme apresentado no vídeo de walkthrough.
 
+---
+
+## Atualizações Sprint 3
+
+### Novas telas
+
+Foram adicionadas duas novas telas ao protótipo nesta sprint, ligadas ao fluxo de liberação de acesso a uma máquina:
+
+**Cadastro Facial** — tela onde a referência facial do operador é capturada e registrada no sistema (durante o cadastro do operador ou em uma atualização posterior). Essa referência é a base usada para o reconhecimento automático do operador.
+**Check-in** — tela acionada antes do operador iniciar o uso de uma máquina. O operador é identificado por reconhecimento facial em tempo real, comparando a captura da câmera com a referência salva no Cadastro Facial. Após a confirmação da identidade, exibe as certificações e os EPIs exigidos para aquela máquina antes de liberar o acesso. Em caso de falha no reconhecimento, é oferecido um caminho alternativo de identificação (ID/crachá).
+
+## Protótipo (Figma)
+[[Figma](https://www.figma.com/design/1MUdcD5Y0e2eWfxA42v2DO/Projeto-SPI?node-id=0-1&t=geIx5mIYYFMS3Q9U-1)] (permissão de visualização ativa)
+
+## Impacto na arquitetura
+
+Essas mudanças não representaram alterações na arquitetura técnica da aplicação. O reconhecimento facial já estava previsto desde as etapas anteriores do projeto — apenas não havia sido desenvolvido/prototipado ainda. Nesta sprint, essa funcionalidade foi de fato implementada no protótipo, junto com o fluxo de check-in que a utiliza.
+

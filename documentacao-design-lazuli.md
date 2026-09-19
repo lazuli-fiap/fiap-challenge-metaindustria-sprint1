@@ -130,8 +130,17 @@ Com base no Diagrama de Casos de Uso "Sistema de monitoramento de segurança ind
 - **Hierarquia visual**: informações mais críticas (riscos, não conformidades) sempre posicionadas no topo das telas, seguindo o padrão F de leitura
 
 ---
+##6. Atualização — Novas Telas: Check-in e Cadastro Facial
 
-## 6. Próximos Passos
+Foram adicionadas duas novas telas ao protótipo, ligadas ao módulo de Máquinas: juntas, formam o fluxo de liberação de acesso a uma máquina específica.
+
+- **Cadastro Facial**: Tela onde a referência facial do operador é capturada e registrada no sistema (geralmente durante o Cadastro de Novo Operador, ou posteriormente para atualizar o registro). Essa referência é a base usada pelo sistema para reconhecer o operador automaticamente no momento do Check-in.
+
+- **Check-in**: Tela acionada antes do operador iniciar o uso de uma máquina (não se trata de um check-in de início de turno). O operador é identificado por reconhecimento facial em tempo real, comparando a captura da câmera com a referência salva no Cadastro Facial. Após a confirmação da identidade, exibe as certificações e os EPIs exigidos para operar aquela máquina específica antes de liberar o acesso. Em caso de falha no reconhecimento — comum quando o operador usa óculos, capacete ou máscara — o fluxo oferece um caminho alternativo de identificação (ID/crachá) para não travar o acesso à máquina.
+
+**Casos de uso cobertos (Sprint 1)**: Validar operador, Validar certificação do operador, Detectar pessoas, Rastrear operadores, Controlar operação da máquina.
+
+## 7. Próximos Passos
 
 - [ ] Garantir navegação real (cliques funcionais) entre todas as telas no Figma
 - [ ] Avaliar inclusão de tela/ação para "Controlar operação da máquina" (item 3.3)
